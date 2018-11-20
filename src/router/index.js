@@ -1,21 +1,27 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/pages/Home'
+import Demo from '@/pages/Demo'
 import CheckCard from '@/pages/CheckCard'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    // {
-    //   path: '/',
-    //   name: 'HelloWorld',
-    //   component: HelloWorld
-    // },
     {
       path: '/',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/checkcard/:tid',
       name: 'CheckCard',
       component: CheckCard
+    },
+    {
+      path: '/demo',
+      name: 'Demo',
+      component: Demo
     }
   ]
 })
